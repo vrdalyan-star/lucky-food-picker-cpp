@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  
+    int angka[5] = {
+      1,
+      2,
+      3,
+      4,
+      5
+    };
+
+    string food[5] = {
+        "Sushi",
+        "Apple Caramel",
+        "Cheese cake",
+        "Fried Chicken",
+        "Pasta"
+    };
+
+    int input;
+    bool ditemukan = false;
+
+    cout << "Choose random number 1 - 5!\n"<<endl;
+    cin >> input;
+
+    for(int i = 0; i < 5; i++) {
+
+        if(input == angka[i]) {
+
+            cout << "Congratulations" << endl;
+            cout<<"You've got: "<<food[i]<<endl;
+            ditemukan = true;
+            break;
+        }
+
+    }
+
+    if(ditemukan == false) {
+        cout << "Too bad, you're over" << endl;
+    }
+
+    return 0;
+}
